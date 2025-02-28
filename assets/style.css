@@ -287,53 +287,8 @@ body {
     border-top: 1px solid #40576b;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .nav-list {
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .main-nav {
-        padding: 1rem;
-    }
-
-    .nav-list {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 0.5rem;
-    }
-
-    .nav-list a {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-}
 
 @media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-    }
-
-    .dropdown {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
-        background: rgba(255, 255, 255, 0.05);
-        margin-top: 0;
-    }
-
-    .dropdown a {
-        padding-left: 2rem;
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    .dropdown a:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-
     .cards-section {
         padding: 2rem 1rem;
     }
@@ -346,6 +301,60 @@ body {
         padding: 2rem 1rem;
     }
 }
+
+/* Updated CSS for mobile dropdowns */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dropdown-parent {
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem !important;
+    }
+
+    .dropdown {
+        position: static;
+        display: none;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none !important;
+    }
+
+    .dropdown-parent.active .dropdown {
+        display: block;
+    }
+
+    .dropdown a {
+        padding: 0.8rem 2rem !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-size: 0.9rem !important;
+    }
+
+    .dropdown a:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .dropdown li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown li:last-child {
+        border-bottom: none;
+    }
+}
+
 
 @media (max-width: 480px) {
     .hero-title {
