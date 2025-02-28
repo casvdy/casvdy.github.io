@@ -287,6 +287,9 @@ body {
     border-top: 1px solid #40576b;
 }
 
+.menu-btn {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .cards-section {
@@ -304,6 +307,20 @@ body {
 
 /* Updated CSS for mobile dropdowns */
 @media (max-width: 768px) {
+    .header {
+        background-color: #1a365d;
+    }
+    .menu-btn {
+        position: relative;
+        left: 94vw;
+        display: block;
+        filter: invert(100%);
+    }
+
+    .main-nav {
+        display: none;
+    }
+
     .nav-list {
         flex-direction: column;
         gap: 0;
