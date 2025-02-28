@@ -25,8 +25,8 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1rem;
 }
+
 
 .hero-content .logo {
     width: min(150px, 20vw);
@@ -42,32 +42,77 @@ body {
 
 /* Main navigation */
 .main-nav {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    padding: 0.5rem 2rem;
-    flex-wrap: wrap;
-    background: transparent;
+    background: #1a365d;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
 }
 
-.main-nav a {
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list>li {
+    position: relative;
+}
+
+.nav-list a {
     font-family: 'Playfair Display', sans-serif;
-    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
-    font-weight: 500;
-    color: #2c3e50;
-    background-color: #fff;
+    font-weight: 400;
+    color: #fff;
     text-decoration: none;
-    padding: 0.75rem 1.25rem;
+    padding: 0.8rem 1.2rem;
     border-radius: 4px;
     transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.main-nav a:hover {
-    background: #0f5081;
-    color: #ecf0f1;
+.nav-list a:hover {
+    background: rgba(255, 255, 255, 0.15);
     transform: translateY(-2px);
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.nav-list li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+.dropdown a {
+    color: #2c3e50;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.dropdown a:hover {
+    background: #f0f4f8;
+    color: #1a365d;
+    transform: none;
 }
 
 /* Hero section */
@@ -84,9 +129,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 101%; 
-    /* 101 due to margin-top offset cuz of the relative header */
-    margin-top:-6.5rem;
+    height: 103vh;
+    margin-top: -6.5rem;
 }
 
 .hero-image {
@@ -243,54 +287,63 @@ body {
     border-top: 1px solid #40576b;
 }
 
-@media (max-width: 768px) {
-    .cards-section {
-        padding: 2rem 1rem;
-    }
-    
-    .about-heading {
-        font-size: 2rem;
-    }
-    
-    .footer {
-        padding: 2rem 1rem;
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .nav-list {
+        gap: 1rem;
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero {
-        margin-top: 6rem;
-    }
-
-    .hero-content {
+@media (max-width: 992px) {
+    .main-nav {
         padding: 1rem;
     }
 
-    .hero-title {
-        margin-bottom: 1rem;
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.5rem;
     }
 
-    .main-nav {
-        gap: 0.75rem;
-        padding: 0.5rem;
-        justify-content: center;
-    }
-
-    .main-nav a {
-        padding: 0.5rem 1rem;
+    .nav-list a {
+        padding: 0.6rem 1rem;
         font-size: 0.9rem;
     }
+}
 
-    .logo {
-        position: static;
-        margin: 0 auto 1rem;
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
     }
 
-    .header {
-        position: relative;
-        padding: 1rem 0.5rem;
-        text-align: center;
+    .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.05);
+        margin-top: 0;
+    }
+
+    .dropdown a {
+        padding-left: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .dropdown a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .cards-section {
+        padding: 2rem 1rem;
+    }
+
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .footer {
+        padding: 2rem 1rem;
     }
 }
 
