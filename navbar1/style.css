@@ -413,6 +413,7 @@ body {
         position: absolute;
         position-anchor: --dropd;
         top: 8rem;
+        left: 2rem;
         left: anchor(bottom,2.1rem);
         background: #fff;
         min-width: 220px;
