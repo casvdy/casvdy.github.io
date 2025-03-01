@@ -41,7 +41,7 @@ body {
 
 /* Main navigation */
 .main-nav {
-    background: #1a365d00;
+    background: #1a365d;
     padding: 1rem 2rem;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -364,20 +364,31 @@ body {
 
 @media (max-width: 768px) {
 
-    .hero-image-container {
-        margin-top: -10rem;
+    .main-nav {
+        background: rgba(240, 248, 255, 0.121);
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1000;
     }
+
+    .hero-image-container {
+        margin-top: -11rem;
+    }
+
     .nav-list {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 0.5rem;
+        gap: 1.5rem;
         font-size: 0.7rem;
         padding: 0.5rem;
     }
 
-    .nav-list > li {
+    .nav-list>li {
         position: static;
         text-align: center;
+        anchor-name: --dropd;
+        width: 4.5rem;
     }
 
     .nav-list a {
@@ -392,16 +403,63 @@ body {
         align-items: center;
     }
 
-    .dropdown-parent > a::after {
+    .dropdown-parent>a::after {
         content: '▼';
         font-size: 0.5rem;
         margin-left: 0.2rem;
     }
 
     .dropdown {
-        grid-column: 1 / -1;
-        width: 100%;
-        margin-left: 0;
+        position: absolute;
+        position-anchor: --dropd;
+        top: 8rem;
+        left: anchor(bottom,2.1rem);
+        background: #fff;
+        min-width: 220px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        padding: 0.5rem 0;
+        list-style: none;
+        margin-top: 0.5rem;
+        z-index: 999;
+    }
+
+    .dropdown-parent:nth-child(1) > .dropdown {
+        top: 4rem;
+    }
+    .dropdown-parent:nth-child(2) > .dropdown {
+        top: 4rem;
+        left: 6.8rem;
+    }
+
+    .dropdown-parent:nth-child(3) > .dropdown {
+        top: 4rem;
+        left: 11.8rem;
+    }
+
+    .dropdown-parent:nth-child(4) > .dropdown {
+        top: 8rem;
+    }
+
+    .nav-list li:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(5px);
+    }
+
+    .dropdown a {
+        color: #2c3e50;
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .dropdown a:hover {
+        background: #f0f4f8;
+        color: #1a365d;
+        transform: none;
     }
 }
 
