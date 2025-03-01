@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="College of Applied Science Vadakkencherry - Affiliated to University of Calicut">
+    <title>College of Applied Science Vadakkencherry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font imports -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+    <script>
+        function togglemenu() {
+            let a = document.querySelector('.main-nav').getAttribute('data-shown');
+            console.log(a)
+            if (a=="shown") {
+                document.querySelector('.main-nav').style = "display: none;";
+                document.querySelector('.main-nav').setAttribute('data-shown', 'hidden');
+            } else {
+                document.querySelector('.main-nav').style = "display: block;";
+                document.querySelector('.main-nav').setAttribute('data-shown', 'shown');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="dropdown-parent"><a href="/about">About</a>
+                    <ul class="dropdown">
+                        <li><a href="/overview">Overview</a></li>
+                        <li><a href="/history">History</a></li>
+                        <li><a href="/vision-mission">Vision & Mission</a></li>
+                        <li><a href="/principal-message">Principal's Message</a></li>
+                        <li><a href="/accreditation">Accreditation</a></li>
+                        <li><a href="/mandatory-disclosures">Mandatory Disclosures</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-parent"><a href="/administration">Admin</a>
+                    <ul class="dropdown">
+                        <li><a href="/principal">Principal</a></li>
+                        <li><a href="/hods">HoDs</a></li>
+                        <li><a href="/faculty">Faculty</a></li>
+                        <li><a href="/staff">Supporting Staff</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-parent" ><a href="/academics">Academics</a>
+                    <ul class="dropdown">
+                        <li><a href="/programmes">Programmes</a></li>
+                        <li><a href="/calendar">Academic Calendar</a></li>
+                        <li><a href="/departments">Departments</a></li>
+                        <li><a href="/iqac">IQAC</a></li>
+                        <li><a href="/library">Library</a></li>
+                    </ul>
+                </li>
+                <li><a href="/admissions-fee">Admissions & Fee</a></li>
+                <li><a href="/research">Research</a></li>
+                <li class="dropdown-parent"><a href="/student-life">Student Life</a>
+                    <ul class="dropdown">
+                        <li><a href="/sports">Sports</a></li>
+                        <li><a href="/ncc-nss">NCC/NSS</a></li>
+                        <li><a href="/clubs">Clubs</a></li>
+                        <li><a href="/health">Health Facilities</a></li>
+                    </ul>
+                </li>
+                <li><a href="/alumni">Alumni</a></li>
+                <li><a href="/information">Information</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownParents = document.querySelectorAll('.dropdown-parent');
+            
+            function closeAllDropdowns() {
+                dropdownParents.forEach(parent => {
+                    parent.classList.remove('active');
+                });
+            }
+
+            dropdownParents.forEach(parent => {
+                parent.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        this.classList.toggle('active');
+                    }
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown-parent')) {
+                    closeAllDropdowns();
+                }
+            });
+
+            window.addEventListener('resize', closeAllDropdowns);
+        });
+    </script>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-image-container">
+                <img class="hero-image" src="/media/NEWHERO2_Crop.jpg" alt="College campus view" loading="lazy">
+            </div>
+
+            <div class="hero-content">
+                <div class="logo">
+                    <img src="/media/ihrd.png" alt="IHRD Institution Logo">
+                </div>
+                <h1 class="hero-title">College of Applied Science,<br>Vadakkencherry</h1>
+                <p class="hero-description">
+                    The College of Applied Science (CASVDY) is located in Vadakkencherry, Palakkad district, Kerala.
+                    Affiliated to the University of Calicut, recognized under Section 2F of the UGC and approved by
+                    the AICTE. Managed by the IHRD, Government of Kerala undertaking.
+                </p>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <div class="cards-grid">
+                <article class="card">
+                    <img src="https://i.pinimg.com/736x/1b/9a/a6/1b9aa646023448674a93995e5dd810f5.jpg"
+                        class="card-image" alt="Campus Event">
+                    <div class="card-content">
+                        <h3 class="card-title">College Events</h3>
+                        <p class="card-text">Explore our vibrant campus life through various cultural and academic
+                            events.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://i.pinimg.com/736x/0f/1f/e0/0f1fe06e6f5810445ffec692f1b58787.jpg"
+                        class="card-image" alt="Campus Life">
+                    <div class="card-content">
+                        <h3 class="card-title">Campus Life</h3>
+                        <p class="card-text">Discover our state-of-the-art facilities and student activities.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://i.pinimg.com/736x/52/1d/2b/521d2bbd56596e7e903e83774968182d.jpg"
+                        class="card-image" alt="Admissions">
+                    <div class="card-content">
+                        <h3 class="card-title">Admissions</h3>
+                        <p class="card-text">Start your journey with us. Learn about admission procedures and deadlines.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://i.pinimg.com/736x/a5/cd/dd/a5cddd7ebc2de2cb2c6cf7c1fe6ad555.jpg"
+                        class="card-image" alt="Notifications">
+                    <div class="card-content">
+                        <h3 class="card-title">Notifications</h3>
+                        <p class="card-text">Stay updated with important college announcements and circulars.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section class="about-section">
+            <h2 class="about-heading">About the College</h2>
+            <div class="about-text">
+                <p>Established in 1999, the College of Applied Science Vadakkencherry has been a pioneer in providing
+                    quality education in basic science and computer applications. Affiliated to the University of
+                    Calicut, we offer undergraduate programs designed to meet the evolving demands of the modern
+                    workforce.</p>
+
+                <p>Our institution boasts modern laboratories, a well-stocked library, and experienced faculty members
+                    dedicated to student success. We emphasize holistic development through various extracurricular
+                    activities and industry partnerships.</p>
+
+                <p>Recognized by the UGC under Section 2(f) and 12(B), the college maintains high academic standards
+                    while fostering an inclusive environment for students from diverse backgrounds.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>College of Applied Science Vadakkencherry</p>
+                    <p>Palakkad District, Kerala</p>
+                    <p>Phone: +91 4923 222056</p>
+                    <p>Email: office@casvdy.ac.in</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p>University of Calicut</p>
+                    <p>IHRD Official Website</p>
+                    <p>Student Portal</p>
+                    <p>NAD Registration</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Affiliations</h3>
+                    <p>Approved by AICTE</p>
+                    <p>Recognized by UGC</p>
+                    <p>Government of Kerala</p>
+                    <p>ISO 9001:2015 Certified</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 College of Applied Science Vadakkencherry. All rights reserved.</p>
+                <p>Designed & Developed by IHRD Technical Team</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
