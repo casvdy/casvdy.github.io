@@ -362,12 +362,13 @@ body {
     height: fit-content;
     width: fit-content;
     right: 14rem;
-    left: 83vw;
+    left: 86vw;
     font-size: xx-small;
     top: auto;
     border-radius: 0.2rem;
     align-self: center;
     border: none;
+    padding: 0.3rem;
     }
 
     .menu-btn {
