@@ -27,6 +27,32 @@ body {
     z-index: 1000;
 }
 
+.search {
+    display: none;
+}
+.student-login-btn {
+    background-color: #304f7a;
+    position: absolute;
+    z-index: 1001;
+    left: 92vw;
+    width: auto;
+    height: 3.5vh;
+    top: 2.5vh;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+    text-rendering: optimizeLegibility;
+    font-weight: bolder;
+    border: 0.1rem solid #78e3fd;
+    color: whitesmoke;
+    border-radius: 0.2rem;
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.student-login-btn:hover {
+    color: black;
+    background-color: #78e3fd;
+}
 
 .hero-content .logo {
     width: min(150px, 20vw);
@@ -308,17 +334,77 @@ body {
 /* Updated CSS for mobile dropdowns */
 @media (max-width: 768px) {
     .header {
+        display: flex;
+        flex-direction: row;
         background-color: #1a365d;
     }
+
+    .search {
+        display: flex;
+    }
+
+    .search input {
+        align-self: center;
+        width: 70vw;
+        height: 3.5vh;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        border: #1a365d;
+        font-family: 'Lexend Deca';
+        font-weight: 300;
+    }
+
+    .search input:focus {
+        outline: none;
+    }
+    
+    .student-login-btn {
+    height: fit-content;
+    width: fit-content;
+    right: 14rem;
+    left: 83vw;
+    font-size: xx-small;
+    top: auto;
+    border-radius: 0.2rem;
+    align-self: center;
+    border: none;
+    }
+
     .menu-btn {
+        padding: 1rem;
         position: relative;
-        left: 94vw;
         display: block;
         filter: invert(100%);
+        cursor: pointer;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+        transform-origin: center;
+    }
+
+    .menu-btn[data-state="change"] {
+        transform: rotate(90deg) scale(0.9);
+        opacity: 0.8;
+    }
+
+    .menu-btn.active {
+        transform: rotate(180deg) scale(1.1);
+        opacity: 1;
     }
 
     .main-nav {
         display: none;
+        background: #1a365d;
+        padding: 1rem 0;
+        position: absolute;
+        top: 3.5rem;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        transform-origin: top;
+        animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .main-nav[data-shown="hidden"] {
+        animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
     .nav-list {
@@ -326,15 +412,20 @@ body {
         gap: 0;
     }
 
+    .nav-list a {
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .main-nav[data-shown="shown"] .nav-list a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
     .dropdown-parent {
         position: relative;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-link {
-        width: 100%;
-        justify-content: space-between;
-        padding: 1rem !important;
     }
 
     .dropdown {
@@ -347,16 +438,26 @@ body {
         opacity: 1;
         visibility: visible;
         transform: none !important;
+        animation: slideUpDropdown 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
     .dropdown-parent.active .dropdown {
         display: block;
+        animation: slideDownDropdown 0.2s 0.1s cubic-bezier(0.4, 0, 0.2, 1) both;
     }
 
     .dropdown a {
         padding: 0.8rem 2rem !important;
         color: rgba(255, 255, 255, 0.9) !important;
         font-size: 0.9rem !important;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dropdown-parent.active .dropdown a {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .dropdown a:hover {
@@ -370,8 +471,54 @@ body {
     .dropdown li:last-child {
         border-bottom: none;
     }
-}
 
+    /* Keyframes for animations */
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            display: block;
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-20px);
+            display: none;
+        }
+    }
+
+    @keyframes slideDownDropdown {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideUpDropdown {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+    }
+}
 
 @media (max-width: 480px) {
     .hero-title {
