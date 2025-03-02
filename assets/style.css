@@ -30,6 +30,7 @@ body {
 .search {
     display: none;
 }
+
 .student-login-btn {
     background-color: #304f7a;
     position: absolute;
@@ -86,6 +87,7 @@ body {
 
 .nav-list>li {
     position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-list a {
@@ -357,17 +359,17 @@ body {
     .search input:focus {
         outline: none;
     }
-    
+
     .student-login-btn {
-    height: fit-content;
-    width: fit-content;
-    right: 14rem;
-    left: 86vw;
-    font-size: xx-small;
-    top: auto;
-    align-self: center;
-    border: none;
-    padding: 0.2rem;
+        height: fit-content;
+        width: fit-content;
+        right: 14rem;
+        left: 86vw;
+        font-size: xx-small;
+        top: auto;
+        align-self: center;
+        border: none;
+        padding: 0.2rem;
     }
 
     .menu-btn {
@@ -393,7 +395,7 @@ body {
     .main-nav {
         display: block;
         opacity: 0;
-        background: #1a365d;
+        background: #1a365d99;
         padding: 1rem 0;
         position: absolute;
         top: 3.5rem;
@@ -479,6 +481,7 @@ body {
             opacity: 0;
             transform: translateY(-20px);
         }
+
         100% {
             opacity: 1;
             transform: translateY(0);
@@ -491,6 +494,7 @@ body {
             opacity: 1;
             transform: translateY(0);
         }
+
         100% {
             opacity: 0;
             transform: translateY(-20px);
@@ -503,6 +507,7 @@ body {
             opacity: 0;
             transform: translateY(-10px);
         }
+
         100% {
             opacity: 1;
             transform: translateY(0);
@@ -514,6 +519,7 @@ body {
             opacity: 1;
             transform: translateY(0);
         }
+
         100% {
             opacity: 0;
             transform: translateY(-10px);
