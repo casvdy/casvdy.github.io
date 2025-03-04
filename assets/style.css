@@ -26,6 +26,11 @@ body {
     z-index: 1000;
 }
 
+.arrow {
+    display: none;
+    visibility: hidden;
+}
+
 .search {
     display: none;
 }
@@ -36,7 +41,7 @@ body {
     left: 95vw;
     width: auto;
     height: fit-content;
-    top: 3.5vh;
+    top: 1.3vh;
     padding: 0.5rem;
     text-transform: uppercase;
     font-family: 'Playfair Display';
@@ -333,6 +338,11 @@ body {
 
 /* Updated CSS for mobile dropdowns */
 @media (max-width: 768px) {
+
+    .arrow {
+        display: block;
+        visibility:visible;
+    }
     .header {
         display: flex;
         flex-direction: row;
