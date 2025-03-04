@@ -21,15 +21,20 @@
 }
 
 .contact-info, .location-map, .telephone-directory {
-    background:#2d93ad;
+    background: #2c3e50;
     border-radius: 8px;
     padding: 2rem;
-    box-shadow: 2px 4px 7px rgb(0, 0, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+.contact-info:hover, .location-map:hover, .telephone-directory:hover {
+    transform: scale(1.022);
+}
+
 
 .contact-info h2, .location-map h2, .telephone-directory h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
@@ -37,10 +42,17 @@
 }
 
 .contact-info p, .telephone-directory ul {
+    display: block;
+    position: relative;
+    top: 3rem;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.35rem;
     color: #ffffff;
     line-height: 1.6;
+}
+
+.telephone-directory ul {
+    top: 3.2rem;
 }
 
 .telephone-directory ul {
@@ -68,5 +80,13 @@
 
     .contact-grid {
         grid-template-columns: 1fr;
+        
+    }
+    .contact-info p, .telephone-directory ul {
+        font-size: 0.9rem;
+    }
+
+    .contact-info p {
+        top: 0;
     }
 }

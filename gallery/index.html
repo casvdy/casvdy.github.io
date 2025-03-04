@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/contact/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <!-- Font imports -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -44,6 +45,11 @@
             }
         }
     </script>
+
+    <style>
+        .grid-item { width: 200px; }
+        .grid-item--width2 { width: 400px; }
+    </style>
 </head>
 
 <body>
@@ -100,30 +106,14 @@
         </nav>
     </header>
 
+    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+        <div class="grid-item">...</div>
+        <div class="grid-item grid-item--width2">...</div>
+        <div class="grid-item">...</div>
+      </div>
+      
+
     <main class="main-content">
-        <!-- Contact Section -->
-        <section class="contact-section">
-            <h1 class="contact-heading">Contact</h1>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p><strong>🏫 Address:</strong> College of Applied Science Vadakkencherry, Erassankulam PO, NH544, Vadakkencherry, Palakkad, Kerala - 678683</p>
-                    <p><strong><span style="filter: invert(100%);">📞</span> Phone:</strong> +91 8547 005 042</p>
-                    <p><strong>📧 Email:</strong> casvdky.ihrd@gmail.com</p>
-                        <p><strong> <span style="filter: invert(100%);">📞</span> Principal:</strong> +91 8547 005 042</p>
-                        <p><strong>☎ Office:</strong> 0492-2255061</p>
-                        <p><strong>☎ Office:</strong> 0492-2985061</p>
-                    </ul>
-                </div>
-
-                <div class="location-map">
-                    <h2>Location Map</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.11433870370573!2d76.46718800067902!3d10.592506439300363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba809f8260c8be5%3A0x80db69da9f8ee43d!2sCollege%20of%20Applied%20Science%20(IHRD)%2C%20Vadakkencherry!5e0!3m2!1sen!2sin!4v1741079523222!5m2!1sen!2sin" 
-                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </section>
-
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-section">
@@ -156,7 +146,6 @@
                 <p>Designed & Developed by IHRD Technical Team</p>
             </div>
         </footer>
-    </main>
+</main>
 </body>
-
 </html>

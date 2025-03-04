@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #255eacc4 1%, white);
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    padding: 1rem;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.pic {
+    height: 25vh;
+    width: fit-content;
+    align-self: center;
+    transform: scale(1);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+  }
