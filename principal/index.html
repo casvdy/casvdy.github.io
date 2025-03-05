@@ -45,6 +45,34 @@
             }
         }
     </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dropdownParents = document.querySelectorAll('.dropdown-parent');
+                
+                function closeAllDropdowns() {
+                    dropdownParents.forEach(parent => {
+                        parent.classList.remove('active');
+                    });
+                }
+    
+                dropdownParents.forEach(parent => {
+                    parent.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            this.classList.toggle('active');
+                        }
+                    });
+                });
+    
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.dropdown-parent')) {
+                        closeAllDropdowns();
+                    }
+                });
+    
+                window.addEventListener('resize', closeAllDropdowns);
+            });
+        </script>
 </head>
 
 <body>
@@ -56,7 +84,7 @@
         <img src="/assets/student_icon.png" class="student-login-btn"></img>
         <nav class="main-nav" data-shown="hidden">
             <ul class="nav-list">
-                <li class="dropdown-parent"><a href="#">About Institution ▼</a>
+                <li class="dropdown-parent"><a href="#">About Institution <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/overview">Overview</a></li>
                         <li><a href="/history">History</a></li>
@@ -66,7 +94,7 @@
                         <li><a href="/mandatory-disclosures">Mandatory Disclosures</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-parent"><a href="/administration">Administration ▼</a>
+                <li class="dropdown-parent"><a href="/administration">Administration <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/principal">Principal</a></li>
                         <li><a href="/hods">HoDs</a></li>
@@ -74,7 +102,7 @@
                         <li><a href="/staff">Supporting Staff</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-parent"><a href="/academics">Academics ▼</a>
+                <li class="dropdown-parent"><a href="/academics">Academics <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/programmes">Programmes</a></li>
                         <li><a href="/calendar">Academic Calendar</a></li>
@@ -85,7 +113,7 @@
                 </li>
                 <li><a href="/admissions-fee">Admissions <span style="font-family: monospace;">&</span> Fee</a></li>
                 <li><a href="/research">Research</a></li>
-                <li class="dropdown-parent"><a href="/student-life">Student Life ▼</a>
+                <li class="dropdown-parent"><a href="/student-life">Student Life <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/sports">Sports</a></li>
                         <li><a href="/ncc-nss">NCC/NSS</a></li>
@@ -106,6 +134,106 @@
         <h2 class="heading">PRINCIPAL</h2>
 
         <img class="pic" src="/media/principal.jpg">
+
+        <div class="name">
+            <h3>PRADIP SOMASUNDARAN</h3>
+            <h4>PRINCIPAL</h4>
+        </div>
+        
+        <div class="details">
+            <article class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Qualification & Experience</h3>
+                    <p class="card-text">
+                    <ul>
+                        <li>B.Sc Physics-Sree Keralavarma College, Thrissur-1987</li>
+                        <li>M.Sc (Tech) Electronics- Andhra University, Visakhapatnam-1991</li>
+                        <li>M.Phil (Electronics)-Bharathidasan University, Tiruchirappalli-2009</li>
+                        <li>Asst. Professor in Electronics-SNR Son’s College Coimbatore-1991-1992</li>
+                        <li>Sales Engineer, for Jelly filled telephone cables &amp; Fibre Optic Cables-Vindhya
+                            Telelinks/Birla Ericcson Opticals-Chennai-1992-1994</li>
+                        <li>Lecturer in Electronics-CAS Puthuppally/CAS Vadakkencherry-1994-2003</li>
+                        <li>Senior Lecturer in Electronics-CAS Vadakkencherry-2003-2009</li>
+                        <li>Principal-CAS Vadakkencherry/CAS Malampuzha-From 2009 </li>
+                    </ul>
+                    <br>
+                    <hr style="border-radius: 0.5rem;color: #1a365d;;">
+                    <br>
+                    <div class="card-title">Extra-Curricular and Youth exchange activities</div>
+                    <ul>
+                        <li>Renowned Playback Singer in South Indian Films. Sung around 100 film songs and in various
+                            Music albums.</li>
+                        <li>“A” Graded Singer in Light music of All India Radio (AIR) &amp; Doordarshan.</li>
+                        <li>Participated in various International Youth exchange programs. Was selected to be a part of
+                            the 19 member Indian contingent, which took part in the 6th “Ship for World Youth
+                            (<strong><a href="https://www.swyaa-india.in/swy6.html"><span
+                                        style="color: #3366ff;">SWY</span></a></strong>) Program” in 1994, that Visited
+                            Japan, Singapore, Srilanka, Kenya, &amp; Greece, on a two-and-a-half months long ship
+                            voyage.</li>
+                        <li><span style="font-size: inherit;">Also participated in the “Renaissance 2003 World Youth
+                                Leaders Meet” which was held in Japan in 2003. Was one of the four Indians selected for
+                                representing India in this program. </span></li>
+                        <li><span style="font-size: inherit;">Participated in SWY International Alumni Association
+                                Leaders meet at Tokyo in 2019, conferences held in New Delhi, Dubai &amp; Moscow in
+                                2016, 2017 &amp; 2019.</span></li>
+                    </ul>
+
+                    </p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Academic Activities</h3>
+                    <p class="card-text">
+                    <ul>
+                        <li>Resource person for IUCCSM Gandhi University. Presented Paper in conference conducted by
+                            Gandhi University Kottayam.</li>
+                        <li>Presented Seminars in Youth exchange programs held at Tokyo-Japan, Moscow-Russia and
+                            Dubai-UAE representing India on various occasions.</li>
+                        <li>Was a member of the Committee for the preparation of Syllabus &nbsp;for M.Sc Electronics for
+                            the University of Calicut when it was first introduced in the University of Calicut under
+                            the Colleges of Applied Science at Calicut and Vadakkencherry.</li>
+                        <li>Has delivered Lectures as a subject expert at UGC Academic Staff College, University of
+                            Kerala Thiruvananthapuram&nbsp; and other Colleges and educational institutions on several
+                            occasions.</li>
+                        <li>Was a member of the committee formed by the Govt. of Kerala for Syllabus restructuring and
+                            upgrading of facilities for Govt. Music Colleges in Kerala.</li>
+                        <li>Was a member of the Board of studies for Electronics under Bharathiyar&nbsp; University
+                            Coimbatore.</li>
+                        <li>Is a member of various committees formed by the Vice Chancellor, Mahatma Gandhi University
+                            Kottayam for academic activities under the “Inter University Centre for Studies in Science
+                            of Music” (IUCSSM).&nbsp;</li>
+                        <li>Member Board of Studies for Electronics (U.G &amp; P.G) University of Calicut from 2013 to
+                            2017.</li>
+                        <li>Currently member, Faculty of Fine Arts,&nbsp; University of Calicut.</li>
+                        <li>Instrumental in starting a course PGDAE <span style="font-size: inherit;">(Post graduate
+                                Diploma in Audio </span>Engineering) at College of Applied Science, Vadakkencherry the
+                            very such First course in Kerala under the Govt. sector).</li>
+                        <li>Fellow of IETE (Institution of Electronics and Telecommunication Engineer’s).</li>
+                        <li><span style="color: #3366ff;"><a style="color: #3366ff;"
+                                    href="https://www.swyaa-india.in/govern.html">Secretary of SWY Alumni Association
+                                    India</a></span></li>
+                    </ul>
+                    </p>
+                </div>
+            </article>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">Awards</div>
+                    <div class="card-text"></div>
+                    <ul>
+                        <li><strong>1991</strong>– President’s medal winner in AIR National level Light Music&nbsp;competition.</li>
+                        <li><strong>1996</strong>– Lata Mangeshkar Award for best male singer of India in Meri Awaz Suno, the first National Level Televised Music competition in India.</li>
+                        <li><strong>1997</strong>– Ten Outstanding Young Indian (TOYI) Award given by Junior Chamber International India in recognition to his excellence in Youth activities.</li>
+                        <li><strong>1997</strong>– Dubai Kairali Kala Kendra Award</li>
+                        <li><strong>1998</strong>– Best T.V. Playback singer of Kerala award for the Song Ennakkaruppin Ezhazhaku</li>
+                        <li><strong>2005</strong>– Kalaratna State Award for overall contributions to the field of music.</li>
+                        <li><strong>2017</strong>– Indywood Excellence award in Music by Aries Group.</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-section">
@@ -137,7 +265,7 @@
                 <p>&copy; 2023 College of Applied Science Vadakkencherry. All rights reserved.</p>
                 <p>Designed & Developed by IHRD Technical Team</p>
             </div>
-            </footer>
+        </footer>
     </main>
 </body>
 

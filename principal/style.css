@@ -1,15 +1,21 @@
 body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #255eacc4 1%, white);
+    background: linear-gradient(to bottom, #1a365d 10%, #f5f5f5);
+}
+
+.header {
+    box-shadow: 0 4px 6px #1a365d;
+    border-bottom: 0.1rem dotted black;
 }
 
 .heading {
     text-align: center;
-    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     padding: 1rem;
     font-size: 3rem;
     text-decoration: underline;
+    color: #fff;
 }
 
 .pic {
@@ -25,4 +31,43 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-  }
+}
+
+.details {
+    display: grid;
+    grid-template-areas: "a a";
+}
+
+.card {
+    margin: 3rem;
+    padding: 1rem;
+    width: 43vw;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.name {
+    font-family:'Times New Roman', Times, serif;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 3rem;
+    text-align: center;
+    align-self: center;
+    border: 0.1rem solid rgba(62, 54, 54, 0.644);
+    background-color: aliceblue;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.253);
+}
+
+@media (max-width: 768px) {
+    .details {
+        display: grid;
+        grid-template-areas: "a";
+    }
+
+    .card {
+        width: 83vw;
+    }
+}
