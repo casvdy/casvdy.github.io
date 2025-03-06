@@ -80,7 +80,6 @@
 
 <body>
     <header class="header">
-        <button onclick="document.location.replace('/')" class="home-btn">⌂</button>
         <img class="menu-btn" src="/media/menu.svg" onclick="toggleMenu()" data-state="still" />
         <form class="search">
             <input type="search" placeholder="Search courses, people, etc">
@@ -88,6 +87,7 @@
         <img src="/assets/student_icon.png" class="student-login-btn"></img>
         <nav class="main-nav" data-shown="hidden">
             <ul class="nav-list">
+                <li><a href="/">Home</a></li>
                 <li class="dropdown-parent"><a href="#">About Institution <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/overview">Overview</a></li>
