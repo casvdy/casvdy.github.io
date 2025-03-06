@@ -1,0 +1,44 @@
+.main-content {
+    background-image: url('/media/NEWHERO2_Crop.jpg');
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    color: #ffffff;
+    position: relative;
+}
+
+.card {
+    margin-top: 2rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 16vw;
+    right: 16vw;
+    word-wrap: break-word;
+}
+
+.card-text {
+    font-size: 1.5rem;
+}
+.card-title {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        word-wrap: break-word;
+        left: 6vw;
+        right: 6vw;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
