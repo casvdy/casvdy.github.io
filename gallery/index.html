@@ -7,10 +7,10 @@
     <meta name="description" content="Contact College of Applied Science Vadakkencherry - Affiliated to University of Calicut">
     <title>Contact - College of Applied Science Vadakkencherry</title>
     <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="/contact/style.css">
+    <link rel="stylesheet" href="/gallery/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
     <!-- Font imports -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -76,11 +76,6 @@
             window.addEventListener('resize', closeAllDropdowns);
         });
     </script>
-
-    <style>
-        .grid-item { width: 200px; }
-        .grid-item--width2 { width: 400px; }
-    </style>
 </head>
 
 <body>
@@ -92,7 +87,7 @@
         <img src="/assets/student_icon.png" class="student-login-btn"></img>
         <nav class="main-nav" data-shown="hidden">
             <ul class="nav-list">
-                <li class="dropdown-parent"><a href="#">About Institution ▼</a>
+                <li class="dropdown-parent"><a href="#">About Institution <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/overview">Overview</a></li>
                         <li><a href="/history">History</a></li>
@@ -102,7 +97,7 @@
                         <li><a href="/mandatory-disclosures">Mandatory Disclosures</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-parent"><a href="/administration">Administration ▼</a>
+                <li class="dropdown-parent"><a href="/administration">Administration <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/principal">Principal</a></li>
                         <li><a href="/hods">HoDs</a></li>
@@ -110,7 +105,7 @@
                         <li><a href="/staff">Supporting Staff</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-parent" ><a href="/academics">Academics ▼</a>
+                <li class="dropdown-parent" ><a href="/academics">Academics <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/programmes">Programmes</a></li>
                         <li><a href="/calendar">Academic Calendar</a></li>
@@ -121,7 +116,7 @@
                 </li>
                 <li><a href="/admissions-fee">Admissions <span style="font-family: monospace;">&</span> Fee</a></li>
                 <li><a href="/research">Research</a></li>
-                <li class="dropdown-parent"><a href="/student-life">Student Life ▼</a>
+                <li class="dropdown-parent"><a href="/student-life">Student Life <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/sports">Sports</a></li>
                         <li><a href="/ncc-nss">NCC/NSS</a></li>
@@ -131,20 +126,40 @@
                 </li>
                 <li><a href="/alumni">Alumni</a></li>
                 <li><a href="/information">Information</a></li>
-                <li><a href="/gallery">Picture Gallery</a></li>
+                <li><a href="/gallery">Gallery</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-        <div class="grid-item">...</div>
-        <div class="grid-item grid-item--width2">...</div>
-        <div class="grid-item">...</div>
-      </div>
-      
-
     <main class="main-content">
+        <h1 class="gallery-heading">Campus Gallery</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="/media/gallery/01.jpeg" alt="College Library">
+            </div>
+            <div class="gallery-item">
+                <img src="/media/gallery/02.jpeg" alt="Science Laboratory">
+            </div>
+            <div class="gallery-item">
+                <img src="/media/gallery/03.jpeg" alt="Sports Day Event">
+            </div>
+            <div class="gallery-item">
+                <img src="/media/gallery/04.jpeg" alt="Seminar Hall">
+            </div>
+            <div class="gallery-item">
+                <img src="/media/gallery/05.jpeg" alt="Campus Grounds">
+            </div>
+            <div class="gallery-item">
+                <img src="/media/gallery//06.jpeg" alt="Modern Classroom">
+            </div>
+            <div class="gallery-item">
+                <img src="/media/gallery/07.jpeg" alt="NCC Parade">
+            </div>
+            <div class="gallery-item">
+                <img src="/media/gallery/08.jpeg" alt="Cultural Event">
+            </div>
+        </div>
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-section">
