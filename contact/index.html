@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact College of Applied Science Vadakkencherry - Affiliated to University of Calicut">
+    <meta name="description"
+        content="Contact College of Applied Science Vadakkencherry - Affiliated to University of Calicut">
     <title>Contact - College of Applied Science Vadakkencherry</title>
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/contact/style.css">
@@ -29,7 +30,7 @@
 
                 // Cascade animation with faster delays
                 navLinks.forEach((link, index) => {
-                    link.style.transitionDelay = `${(index-1) * 0.03}s`;
+                    link.style.transitionDelay = `${(index - 1) * 0.03}s`;
                 });
             } else {
                 // Closing animation
@@ -44,39 +45,42 @@
             }
         }
     </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const dropdownParents = document.querySelectorAll('.dropdown-parent');
-                
-                function closeAllDropdowns() {
-                    dropdownParents.forEach(parent => {
-                        parent.classList.remove('active');
-                    });
-                }
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownParents = document.querySelectorAll('.dropdown-parent');
+
+            function closeAllDropdowns() {
                 dropdownParents.forEach(parent => {
-                    parent.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
+                    parent.classList.remove('active');
+                });
+            }
+
+            dropdownParents.forEach(parent => {
+                parent.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 768) {
+                        // Check if the clicked element is a link inside the dropdown
+                        if (!e.target.closest('.dropdown a')) {
+                            e.preventDefault(); // Only prevent default if not clicking a dropdown link
                             this.classList.toggle('active');
                         }
-                    });
-                });
-    
-                document.addEventListener('click', function(e) {
-                    if (!e.target.closest('.dropdown-parent')) {
-                        closeAllDropdowns();
                     }
                 });
-    
-                window.addEventListener('resize', closeAllDropdowns);
             });
-        </script>
+
+            document.addEventListener('click', function (e) {
+                if (!e.target.closest('.dropdown-parent')) {
+                    closeAllDropdowns();
+                }
+            });
+
+            window.addEventListener('resize', closeAllDropdowns);
+        });
+    </script>
 </head>
 
 <body>
     <header class="header">
-        <img class="menu-btn" src="/media/menu.svg" onclick="toggleMenu()" data-state="still"/>
+        <img class="menu-btn" src="/media/menu.svg" onclick="toggleMenu()" data-state="still" />
         <form class="search">
             <input type="search" placeholder="Search courses, people, etc">
         </form>
@@ -101,7 +105,7 @@
                         <li><a href="/staff">Supporting Staff</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-parent" ><a href="/academics">Academics <span class="arrow">▼</span></a>
+                <li class="dropdown-parent"><a href="/academics">Academics <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/programmes">Programmes</a></li>
                         <li><a href="/calendar">Academic Calendar</a></li>
@@ -135,19 +139,21 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <h2>Contact Information</h2>
-                    <p><strong>🏫 Address:</strong> College of Applied Science Vadakkencherry, Erassankulam PO, NH544, Vadakkencherry, Palakkad, Kerala - 678683</p>
+                    <p><strong>🏫 Address:</strong> College of Applied Science Vadakkencherry, Erassankulam PO, NH544,
+                        Vadakkencherry, Palakkad, Kerala - 678683</p>
                     <p><strong><span style="filter: invert(100%);">📞</span> Phone:</strong> +91 8547 005 042</p>
                     <p><strong>📧 Email:</strong> casvdky.ihrd@gmail.com</p>
-                        <p><strong> <span style="filter: invert(100%);">📞</span> Principal:</strong> +91 8547 005 042</p>
-                        <p><strong>☎ Office:</strong> 0492-2255061</p>
-                        <p><strong>☎ Office:</strong> 0492-2985061</p>
+                    <p><strong> <span style="filter: invert(100%);">📞</span> Principal:</strong> +91 8547 005 042</p>
+                    <p><strong>☎ Office:</strong> 0492-2255061</p>
+                    <p><strong>☎ Office:</strong> 0492-2985061</p>
                     </ul>
                 </div>
 
                 <div class="location-map">
                     <h2>Location Map</h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.11433870370573!2d76.46718800067902!3d10.592506439300363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba809f8260c8be5%3A0x80db69da9f8ee43d!2sCollege%20of%20Applied%20Science%20(IHRD)%2C%20Vadakkencherry!5e0!3m2!1sen!2sin!4v1741079523222!5m2!1sen!2sin" 
-                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245.11433870370573!2d76.46718800067902!3d10.592506439300363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba809f8260c8be5%3A0x80db69da9f8ee43d!2sCollege%20of%20Applied%20Science%20(IHRD)%2C%20Vadakkencherry!5e0!3m2!1sen!2sin!4v1741079523222!5m2!1sen!2sin"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
