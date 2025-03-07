@@ -1,3 +1,7 @@
+body {
+    background-color: whitesmoke;
+}
+
 .faculty {
     display: flex;
     justify-content: center;
@@ -13,25 +17,90 @@
 .tr-grid {
     display: grid;
     grid-template-areas: "a a a a";
+    gap: 1rem;
+    justify-items: center;
 }
 
 .staff-card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 1.5rem;
+    background-color: white;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px; /* Space for revealed content */
+}
+
+.staff-info {
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 3rem; /* Reserve space for staff-extra */
+    transition: transform 0.3s ease;
+    line-height: 1.2;
+}
+
+.staff-extra {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 1rem;
     text-align: center;
 }
 
+.staff-card:hover {
+    transform: translateY(-20px); /* Lift the card */
+}
+
+.staff-card:hover .staff-extra {
+    transform: translateY(0); /* Reveal hidden section */
+    opacity: 1;
+}
+
+.staff-card:hover .staff-info {
+    transform: translateY(-100px);
+}
 .staff-name {
-    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
 }
 
+
+
+
+
+.staff-phone {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+.staff-mail {
+    font-size: 0.6rem;
+    font-family: monospace;
+}
+
 .hod-pic {
-    height: fit-content;
+    height: 30vh;
     border-radius: 8px;
 }
+
 .staff-pic {
-    height: fit-content;
+    height: 30vh;
+    width: fit-content;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+
+    .tr-grid {
+        display: grid;
+        grid-template-areas: "a";
+        gap: 1rem;
+        justify-items: center;
+    }
 }
