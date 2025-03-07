@@ -16,67 +16,6 @@
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     </style>
     <script src="/assets/util.js"></script>
-    <script>
-        function toggleMenu() {
-            const hamburger = document.querySelector('.menu-btn');
-            const menu = document.querySelector('.main-nav');
-            const navLinks = document.querySelectorAll('.nav-list a');
-
-            if (menu.getAttribute('data-shown') === 'hidden') {
-                // Opening animation
-                menu.style.display = 'block';
-                menu.setAttribute('data-shown', 'shown');
-                hamburger.classList.add('active');
-                hamburger.setAttribute("src", "/media/close.svg");
-
-                // Cascade animation with faster delays
-                navLinks.forEach((link, index) => {
-                    link.style.transitionDelay = `${(index-1) * 0.03}s`;
-                });
-            } else {
-                // Closing animation
-                menu.setAttribute('data-shown', 'hidden');
-                hamburger.classList.remove('active');
-                hamburger.setAttribute("src", "/media/menu.svg");
-
-                // Reset delays for next opening
-                navLinks.forEach(link => {
-                    link.style.transitionDelay = '0s';
-                });
-            }
-        }
-    </script>
-       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const dropdownParents = document.querySelectorAll('.dropdown-parent');
-
-            function closeAllDropdowns() {
-                dropdownParents.forEach(parent => {
-                    parent.classList.remove('active');
-                });
-            }
-
-            dropdownParents.forEach(parent => {
-                parent.addEventListener('click', function (e) {
-                    if (window.innerWidth <= 768) {
-                        // Check if the clicked element is a link inside the dropdown
-                        if (!e.target.closest('.dropdown a')) {
-                            e.preventDefault(); // Only prevent default if not clicking a dropdown link
-                            this.classList.toggle('active');
-                        }
-                    }
-                });
-            });
-
-            document.addEventListener('click', function (e) {
-                if (!e.target.closest('.dropdown-parent')) {
-                    closeAllDropdowns();
-                }
-            });
-
-            window.addEventListener('resize', closeAllDropdowns);
-        });
-    </script>
 </head>
 
 <body>
