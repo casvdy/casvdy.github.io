@@ -7,6 +7,7 @@
     font-family: 'Playfair Display','Times New Roman', Times, serif;
     color: #ffffff;
     position: relative;
+    margin: 1rem;
 }
 
 .card {
@@ -20,7 +21,7 @@
 }
 
 .card-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 .card-title {
     font-size: 1.8rem;

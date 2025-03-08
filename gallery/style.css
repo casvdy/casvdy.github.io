@@ -54,7 +54,7 @@
 
 @media (max-width: 480px) {
     .gallery-container {
-        columns: 1;
+        columns: 2;
     }
     
     .gallery-item {
