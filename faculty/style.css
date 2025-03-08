@@ -1,5 +1,6 @@
 body {
     background-color: whitesmoke;
+    overflow-x: hidden;
 }
 
 .faculty {
@@ -94,6 +95,42 @@ body {
     width: fit-content;
     border-radius: 8px;
 }
+
+/* ----- FACULTY CARD PAGE --------- */
+
+.fac-head {
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-decoration: underline;
+    color: #1a365d;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "a a a a";
+}
+
+.card-grid .card {
+    margin: 3rem;
+    width: 320px;
+    text-decoration: none;
+    color: #1a365d;
+}
+
+.card-subtitle {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-weight: 400;
+}
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-areas: "a";
+        justify-items: center;
+    }
+}
+/* --------------------------------- */
 
 @media (max-width: 768px) {
 
