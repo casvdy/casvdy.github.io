@@ -23,11 +23,12 @@ body {
 }
 
 .staff-card {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     transition: transform 0.3s ease;
     overflow: hidden;
     position: relative;
-    margin-bottom: 20px; /* Space for revealed content */
+    margin-bottom: 20px;
+    /* Space for revealed content */
 }
 
 .staff-info {
@@ -35,8 +36,9 @@ body {
     border-radius: 8px;
     text-align: center;
     position: relative;
-    padding-bottom: 3rem; /* Reserve space for staff-extra */
-    transition: transform 0.3s ease;
+    padding-bottom: 3rem;
+    /* Reserve space for staff-extra */
+    transition: transform 0.3s ease-in-out;
     line-height: 1.2;
 }
 
@@ -47,28 +49,33 @@ body {
     right: 0;
     transform: translateY(100%);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     background: white;
     padding: 1rem;
     text-align: center;
 }
 
 .staff-card:hover {
-    transform: translateY(-20px); /* Lift the card */
+    transform: translateY(-20px);
+    /* Lift the card */
 }
 
 .staff-card:hover .staff-extra {
-    transform: translateY(0); /* Reveal hidden section */
+    transform: translateY(0);
+    /* Reveal hidden section */
     opacity: 1;
 }
 
 .staff-card:hover .staff-info {
     transform: translateY(-100px);
 }
+
 .staff-name {
     font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     margin-bottom: 0.4rem;
+    padding-top: 1rem;
+    top: -1rem;
 }
 
 
@@ -101,7 +108,7 @@ body {
 .fac-head {
     text-align: center;
     padding: 1rem;
-    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 3rem;
     text-decoration: underline;
     color: #1a365d;
@@ -111,6 +118,7 @@ body {
     display: grid;
     gap: 1rem;
     grid-template-areas: "a a a a";
+    margin-bottom: 3rem;
 }
 
 .card-grid .card {
@@ -121,15 +129,26 @@ body {
 }
 
 .card-subtitle {
-    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-weight: 400;
 }
+
 @media (max-width: 768px) {
     .card-grid {
         grid-template-areas: "a";
         justify-items: center;
+        
+    }
+
+    .card-grid .card {
+        margin: 3rem;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: #1a365d;
+        width: 260px;
     }
 }
+
 /* --------------------------------- */
 
 @media (max-width: 768px) {
@@ -140,4 +159,5 @@ body {
         gap: 1rem;
         justify-items: center;
     }
+
 }
