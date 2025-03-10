@@ -27,7 +27,17 @@
 }
 
 .gallery-item:hover {
+
     transform: translateY(-5px);
+}
+
+.gallery-item.full {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    transform: scale(1.5);
+    top: 0;
 }
 
 .gallery-item img {

@@ -38,6 +38,11 @@ body {
     grid-template-areas: "a a";
 }
 
+.details2 {
+    display: grid;
+    justify-items: center;
+}
+
 .card {
     margin: 3rem;
     padding: 1rem;

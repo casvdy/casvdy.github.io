@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact College of Applied Science Vadakkencherry - Affiliated to University of Calicut">
+    <meta name="description"
+        content="Contact College of Applied Science Vadakkencherry - Affiliated to University of Calicut">
     <title>Contact - College of Applied Science Vadakkencherry</title>
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/gallery/style.css">
@@ -16,11 +17,14 @@
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     </style>
     <script src="/assets/util.js"></script>
+    <script>
+
+    </script>
 </head>
 
 <body>
     <header class="header">
-        <img class="menu-btn" src="/media/menu.svg" onclick="toggleMenu()" data-state="still"/>
+        <img class="menu-btn" src="/media/menu.svg" onclick="toggleMenu()" data-state="still" />
         <form class="search">
             <input type="search" placeholder="Search courses, people, etc">
         </form>
@@ -46,7 +50,7 @@
                         <li><a href="/staff">Supporting Staff</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-parent" ><a>Academics <span class="arrow">▼</span></a>
+                <li class="dropdown-parent"><a>Academics <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/programmes">Programmes</a></li>
                         <li><a href="/calendar">Academic Calendar</a></li>
@@ -71,11 +75,13 @@
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
+
+
     </header>
 
     <main class="main-content">
         <h1 class="gallery-heading">Campus Gallery</h1>
-        <div class="gallery-container">
+        <div class="gallery-container" data-fullscreen="false">
             <div class="gallery-item">
                 <img src="/media/gallery/rays.avif" alt="College Natural Beauty entrance" loading="lazy">
             </div>
@@ -142,6 +148,7 @@
                 <p>Designed & Developed by <a href="/didc">DIDC</a></p>
             </div>
         </footer>
-</main>
+    </main>
 </body>
+
 </html>

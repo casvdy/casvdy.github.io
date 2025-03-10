@@ -27,6 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     window.addEventListener('resize', closeAllDropdowns);
+
+    let items = document.querySelectorAll('.gallery-item');
+
+    items.forEach((e) => {
+        e.addEventListener('click', (z) => {
+            if (e.className.includes('full')) {
+                e.classList.remove('full')
+                
+            }
+            else {
+                e.classList.add('full')                
+            }
+            
+        })
+    })
 });
 
 function toggleMenu() {

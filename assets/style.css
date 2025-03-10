@@ -170,12 +170,6 @@ body {
     height: 100%;
     object-fit: cover;
     filter: contrast(85%) brightness(57%);
-    object-position: top;
-    transition: all 1s ease;
-}
-
-.hero-image-container:hover > .hero-image {
-    object-position: unset;
 }
 
 .hero-content {
