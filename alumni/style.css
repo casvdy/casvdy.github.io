@@ -1,0 +1,21 @@
+.alumni-grid {
+    display: grid;
+    grid-template-areas: "a";
+    justify-items: center;
+    background: whitesmoke;
+}
+
+.alumni-title {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-size: 3rem;
+    color: #1a365d;
+    text-align: center;
+    text-decoration: underline;
+
+}
+.alumni-content {
+    width: 90vw;
+    background: rgba(187, 187, 187, 0.788);
+    border-radius: 8px;
+    padding: 3rem;
+}
