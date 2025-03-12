@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
 }
+.header {
+    z-index: 1002;
+}
 
 .main-content::before {
     content: "";
