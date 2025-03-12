@@ -1,0 +1,20 @@
+.nss-grid {
+    display: grid;
+    justify-items: center;
+}
+
+.nss-head {
+    text-align: center;
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-size: 3rem;
+}
+
+.nss-pics {
+    display: flex;
+    flex-direction: row;
+}
+
+.nss-img {
+    width: 320px;
+    height: fit-content;
+}
