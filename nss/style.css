@@ -12,6 +12,9 @@
     font-family: 'Playfair Display','Times New Roman', Times, serif;
     font-size: 3rem;
     padding: 3rem;
+    color: #fff;
+    text-decoration: underline;
+    border-radius: 28px;
 }
 
 .nss-overview {
@@ -20,6 +23,8 @@
     border-radius: 24px;
     width: 95vw;
     margin-bottom: 3rem;
+    font-family: 'Lexend Deca';
+    font-size: 1.3rem;
 }
 
 .nss-pic {
