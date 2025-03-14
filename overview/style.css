@@ -1,20 +1,10 @@
 .main-content {
     display: flex;
     flex-direction: column;
+    background: linear-gradient(#1a365d 1% 0%, #fff);
 }
 .header {
     z-index: 1002;
-}
-
-.main-content::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 178%;
-    background-image: url('/media/gallery/thaani_summer.avif');
-    filter: contrast(55%) brightness(60%);
-    background-position: bottom;
 }
 
 .overview {

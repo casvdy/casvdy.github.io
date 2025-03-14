@@ -1,0 +1,44 @@
+.main-content {
+    background: linear-gradient(#1a365d 1% 0%, #fff);
+}
+
+.principal-grid {
+    display: grid;
+    justify-items: center;
+}
+
+.princi-head {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-decoration: underline;
+    color: #fff;
+    text-align: center;
+}
+
+.princi-box {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width:90vw;
+    background-color: antiquewhite;
+    border-radius: 2rem;
+    margin: 3rem;
+
+}
+
+.princi-image-box {
+    display: flex;
+    align-self: flex-end;
+    padding: 3rem;    
+}
+.princi-img {
+    align-self: flex-end;
+    height: 20vh;
+}
+
+.princi-text {
+    word-wrap: break-word;
+    padding: 2rem;
+}
+
