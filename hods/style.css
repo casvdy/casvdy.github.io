@@ -1,0 +1,16 @@
+.hods-grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.card {
+    text-align: center;
+    width: fit-content;
+}
+
+.card-image {
+    width: fit-content;
+    height: 21rem;
+}
