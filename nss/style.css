@@ -41,3 +41,25 @@
     width: 360px;
     margin: 1rem;
 }
+
+@media (max-width: 768px) {
+    .nss-pic {
+        flex-direction: column;
+    }
+    .nss-grid {
+        grid-template-areas: "a";
+    }
+    .card {
+        width: auto;
+    }
+
+    .nss-head {
+        font-size: 1.5rem;
+    }
+
+    .nss-overview {
+        font-size: 1.1rem;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+}
