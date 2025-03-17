@@ -17,23 +17,20 @@
 
 .princi-box {
     height: fit-content;
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
     width:90vw;
     background-color: antiquewhite;
     border-radius: 2rem;
     margin: 3rem;
-
 }
 
 .princi-image-box {
-    display: flex;
-    align-self: flex-end;
-    padding: 3rem;    
+    position: relative;
+    top: -0.9rem;
+    padding: 1rem; 
+    float: right;   
+    text-align: center;
 }
 .princi-img {
-    align-self: flex-end;
     height: 20vh;
 }
 
