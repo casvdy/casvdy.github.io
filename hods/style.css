@@ -10,6 +10,9 @@
     width: 16rem;
 }
 
+.staff-grid {
+    grid-template-areas: "a a a";
+}
 .card-image {
     width: fit-content;
     height: 21rem;
