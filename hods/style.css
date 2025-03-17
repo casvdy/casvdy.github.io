@@ -2,15 +2,30 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    padding: 3rem;
+    margin-bottom: 3rem;
 }
 
 .card {
     text-align: center;
-    width: fit-content;
+    width: 16rem;
 }
 
 .card-image {
     width: fit-content;
     height: 21rem;
+    object-position: center;
+}
+
+.heading {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    padding: 3rem;
+    color: #1a365d;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: auto;
+    }
 }
