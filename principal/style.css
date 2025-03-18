@@ -36,9 +36,11 @@ body {
 .details {
     display: grid;
     grid-template-areas: "a a";
+    align-self: center;
 }
 
 .details2 {
+    align-self: center;
     display: grid;
     justify-items: center;
 }
