@@ -8,7 +8,7 @@
 }
 
 .princi-head {
-    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     font-size: 3rem;
     text-decoration: underline;
     color: #fff;
@@ -17,26 +17,59 @@
 
 .princi-box {
     height: fit-content;
-    width:90vw;
+    width: 69vw;
     background-color: antiquewhite;
     border-radius: 2rem;
     margin: 3rem;
+    
 }
-
 .princi-image-box {
     position: relative;
     top: -0.9rem;
-    padding: 1rem; 
-    float: right;   
+    padding: 1rem;
+    float: right;
     text-align: center;
 }
+
+.princi-image-box p {
+    background: #fff;
+    top: -2rem;
+    position: relative;
+    font-size: 1rem;
+    border-radius: 1px;
+}
+
 .princi-img {
-    height: 20vh;
+    height: 28vh;
+    border-radius: 8px;
 }
 
 .princi-text {
+    font-family: 'Lexend Deca',Arial, Helvetica, sans-serif;
     word-wrap: break-word;
     padding: 2rem;
     font-size: 1.3rem;
 }
 
+@media (max-width: 768px) {
+
+    .princi-box {
+        margin: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        width: 94vw;
+    }
+    .princi-head {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .princi-text {
+        font-size: 1rem;
+    }
+
+    .princi-image-box {
+        transform: translateX(-1.8rem);
+        top:0;
+    }
+}
