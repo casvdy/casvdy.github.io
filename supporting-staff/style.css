@@ -1,0 +1,9 @@
+.tr-grid {
+    grid-template-areas: "a a a a" !important;
+}
+
+@media (max-width: 768px) {
+    .tr-grid {
+        grid-template-areas: "a" !important;
+    }
+}
