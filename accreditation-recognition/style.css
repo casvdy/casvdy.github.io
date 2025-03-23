@@ -1,0 +1,33 @@
+.card {
+    height: fit-content;
+    width: 20vw;
+}
+
+.heading {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #1a365d;
+    margin: 2rem;
+    text-decoration: underline;
+}
+
+/* .card img {
+    width: 20vw;
+    height: 20vh;
+} */
+
+.cards-grid {
+    gap: 6rem;
+}
+
+a {
+    text-decoration: none;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: auto;
+    }
+}

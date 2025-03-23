@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li><a href="/history">History</a></li>
                         <li><a href="/vision-mission">Vision & Mission</a></li>
                         <li><a href="/principal-message">Principal's Message</a></li>
-                        <li><a href="/accreditation">Accreditation</a></li>
+                        <li><a href="/accreditation-recognition">Accreditation & Recognition</a></li>
                         <li><a href="/mandatory-disclosures">Mandatory Disclosures</a></li>
-                        <li><a href="/annual-report">Annual Report</a></li>
-                        <li><a href="/annual-accounts">Annual Accounts</a></li>
+                        <li><a href="/assets/documents/annualreport25.pdf">Annual Report</a></li>
+                        <li><a href="/assets/documents/annualaccounts25.pdf">Annual Accounts</a></li>
                         <li><a href="/sponsoring-bodies">Sponsoring Bodies</a></li>
                     </ul>
                 </li>
