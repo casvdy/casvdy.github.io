@@ -292,6 +292,10 @@ body {
     padding: 4rem 2rem;
 }
 
+.footer a {
+    text-decoration: none;
+    color: white;
+}
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;

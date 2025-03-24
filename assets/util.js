@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li class="dropdown-parent" ><a>Academics <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/programmes">Programmes</a></li>
-                        <li><a href="/calendar">Academic Calendar</a></li>
+                        <li><a href="http://docs.uoc.ac.in/website/news/2025-01-21%2010:58:29_new1986.pdf">Academic Calendar</a></li>
                         <li><a href="/departments">Departments</a></li>
                         <li><a href="/iqac">IQAC</a></li>
                         <li><a href="/library">Library</a></li>
                         <li><a href="/academic-collab">Academic Collaborations</a></li>
                     </ul>
                 </li>
-                <li><a href="/admissions-fee">Admissions <span style="font-family: monospace;">&</span> Fee</a></li>
+                <li><a href="http://www.ihrdadmissions.org/">Admissions <span style="font-family: monospace;">&</span> Fee</a></li>
                 <li><a href="/research">Research</a></li>
                 <li class="dropdown-parent"><a>Student Life <span class="arrow">▼</span></a>
                     <ul class="dropdown">
@@ -87,26 +87,26 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p>College of Applied Science Vadakkencherry</p>
-                    <p>Palakkad District, Kerala</p>
-                    <p>Phone: +91 4923 222056</p>
-                    <p>Email: office@casvdy.ac.in</p>
+                    <p>College of Applied Science Vadakkencherry</p> 
+                    <p>Erassankulam PO, NH544, </p>
+                    <p>Vadakkencherry, Palakkad, </p>
+                    <p>Kerala - 678683</p>
+                    <p>+91 8547 005 042</p>
                 </div>
 
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <p>University of Calicut</p>
-                    <p>IHRD Official Website</p>
-                    <p>Student Portal</p>
-                    <p>NAD Registration</p>
+                    <a href="https://uoc.ac.in/"><p>University of Calicut</p></a>
+                    <a href="https://ihrd.ac.in/"><p>IHRD Official Website</p></a>
+                    <a href="https://student.uoc.ac.in/"><p>Student Portal</p></a>
+                    <a href="https://nad.digilocker.gov.in/"><p>NAD Registration</p></a>
                 </div>
 
                 <div class="footer-section">
                     <h3>Affiliations</h3>
-                    <p>Approved by ASSWIN</p>
-                    <p>Recognized by UGC</p>
-                    <p>Government of Kerala</p>
-                    <p>ISO 9001:2015 Certified</p>
+                    <a href="/assets/documents/aicte.pdf"><p>Approved by AICTE</p></a>
+                    <a href="/assets/documents/ugc.pdf"><p>Recognized by UGC</p></a>
+                    <a href="https://kerala.gov.in"><p>Government of Kerala</p></a>
                 </div>
             </div>
 

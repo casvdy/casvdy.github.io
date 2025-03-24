@@ -1,0 +1,17 @@
+h2 {
+    font-family: 'Playfair Display';
+    text-align: center;
+    color: #1a365d;
+    text-decoration: underline;
+    margin: 3rem;
+}
+
+table {
+    border: 1px solid #333;
+
+}
+
+td, th {
+    padding: 1rem;
+    border: 1px solid;
+}
