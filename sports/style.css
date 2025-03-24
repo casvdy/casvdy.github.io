@@ -1,0 +1,17 @@
+.heading {
+    text-align: center;
+    color: #1a365d;
+    text-decoration: underline;
+    margin: 3rem;
+}
+
+.sports-grid {
+    display: grid;
+    margin-bottom: 3rem;
+}
+
+
+.card img {
+    height: max-content;
+}
+

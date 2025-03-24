@@ -1,0 +1,41 @@
+:root {
+    background: url('/media/spacepattern.avif');
+}
+
+.main-content {
+    backdrop-filter: blur(2px);
+}
+
+.didc-section {
+    display: flex;
+    flex-direction: column;
+}
+.heading {
+    text-align: center;
+    color: #eff2f7;
+    text-decoration: underline;
+    margin: 3rem;
+}
+
+.subheading {
+    text-align: center;
+    color: #eaeef5;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}   
+
+.desc {
+    align-self: center;
+    position: relative;
+    padding: 1.5rem;
+    width: 70vw;
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 1px 1px 1px black;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    height: max-content;
+}
