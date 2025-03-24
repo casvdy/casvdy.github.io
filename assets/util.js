@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li><a href="/principal-message">Principal's Message</a></li>
                         <li><a href="/accreditation-recognition">Accreditation & Recognition</a></li>
                         <li><a href="/mandatory-disclosures">Mandatory Disclosures</a></li>
-                        <li><a href="/assets/documents/annualreport25.pdf">Annual Report</a></li>
-                        <li><a href="/assets/documents/annualaccounts25.pdf">Annual Accounts</a></li>
+                        <li><a href="/assets/documents/annualreport25.pdf"  target="_blank">Annual Report</a></li>
+                        <li><a href="/assets/documents/annualaccounts25.pdf"  target="_blank">Annual Accounts</a></li>
                         <li><a href="/sponsoring-bodies">Sponsoring Bodies</a></li>
                     </ul>
                 </li>
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li><a href="/principal">Principal</a></li>
                         <li><a href="/hods">HoDs</a></li>
                         <li><a href="/faculty">Faculty</a></li>
-                        <li><a href="/supporting-staff">Supporting Staff</a></li>
                         <li><a href="/admin-staff">Administrative Staff</a></li>
+                        <li><a href="/supporting-staff">Supporting Staff</a></li>
                     </ul>
                 </li>
                 <li class="dropdown-parent" ><a>Academics <span class="arrow">▼</span></a>
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <ul class="dropdown">
                         <li><a href="/sports">Sports</a></li>
                         <li><a href="/nss">NSS</a></li>
-                        <li><a href="/clubs">Clubs</a></li>
+                        <li><a href="/clubs">Clubs & Cells</a></li>
                         <li><a href="/placement-cell">Placement Cell</a></li>
                         <li><a href="/health">Health Facilities</a></li>
                     </ul>
