@@ -18,6 +18,10 @@ h1 {
     width: 15vw;
 }
 
+.cards-grid {
+    justify-items: center;
+}
+
 h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;

@@ -3,6 +3,11 @@
     justify-items: center;
     align-items: center;
     margin-bottom: 3rem;
+
+}
+
+.cards-grid {
+    justify-items: center;
 }
 
 .card {
