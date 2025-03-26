@@ -18,30 +18,44 @@
 .staff-grid {
     grid-template-areas: "a a a";
 }
+
 .card-image {
     width: fit-content;
-    height: 21rem;
+    height: 22rem;
     object-position: center;
 }
 
 .heading {
-    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
     padding: 3rem;
     color: #1a365d;
     text-decoration: underline;
 }
- 
+
 
 .staff-phone {
     font-size: 1rem !important;
 }
 
 .staff-mail {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
+}
+
+.staff-pic {
+    height: 22rem !important;
 }
 
 @media (max-width: 768px) {
+
+    .heading {
+        font-size: 1.2rem !important;
+        transform: scale(1.2);
+    }
     .cards-grid {
-        grid-template-columns: auto;
+        grid-template-columns: subgrid;
+    }
+
+    .staff-card img {
+        height: 22rem;
     }
 }

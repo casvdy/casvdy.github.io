@@ -9,7 +9,7 @@ body {
     flex-direction: column;
 }
 .heading {
-    justify-self: center;
+    font-family: 'Times New Roman', Times, serif;
     align-self: center;
     color: #1a365d;
     text-decoration: underline;
@@ -141,6 +141,14 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .hod-grid {
+        padding: 4rem;
+    }
     .card-grid {
         grid-template-areas: "a";
         justify-items: center;
@@ -153,6 +161,14 @@ body {
         text-decoration: none;
         color: #1a365d;
         width: 260px;
+    }
+
+    .staff-name {
+        font-size: 1.2rem;
+    }
+
+    .staff-pos {
+        font-size: 0.95rem;
     }
 }
 

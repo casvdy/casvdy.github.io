@@ -19,6 +19,8 @@
 
 .cards-grid {
     gap: 6rem;
+    width: 83vw;
+    justify-items: center;
 }
 
 a {
@@ -26,8 +28,12 @@ a {
     padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 908px) {
     .card {
         width: auto;
+    }
+
+    .cards-grid {
+        grid-template-areas: "a";
     }
 }
