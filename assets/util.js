@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li><a href="/academic-collab">Academic Collaborations</a></li>
                     </ul>
                 </li>
-                <li><a href="http://www.ihrdadmissions.org/">Admissions <span style="font-family: monospace;">&</span> Fee</a></li>
+                <li><a href="/admissions-fee">Admissions <span style="font-family: monospace;">&</span> Fee</a></li>
                 <li><a href="/research">Research</a></li>
                 <li class="dropdown-parent"><a>Student Life <span class="arrow">▼</span></a>
                     <ul class="dropdown">
