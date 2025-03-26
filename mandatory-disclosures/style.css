@@ -13,7 +13,7 @@
 
 .cards-grid {
     display: grid;
-    grid-template-areas: "a a a";
+    grid-template-areas: "a";
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 1rem;
@@ -28,7 +28,7 @@
 
 @media (max-width: 1024px) {
     .cards-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: auto;
         gap: 1.5rem;
         padding: 0.5rem;
     }

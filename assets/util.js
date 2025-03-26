@@ -143,8 +143,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (window.innerWidth <= 768) {
                     // Check if the clicked element is a link inside the dropdown
                     if (!e.target.closest('.dropdown a')) {
+                        console.log('clickity clack');
                         e.preventDefault(); // Only prevent default if not clicking a dropdown link
-                        this.classList.toggle('active');
+                        closeAllDropdowns();
+                        if (this.classList.contains('active')) {
+                            this.classList.remove('active');
+                        }
+                        else {
+                            this.classList.add('active');
+                        }
                     }
                 }
             });
