@@ -20,6 +20,9 @@ h1 {
 
 .cards-grid {
     justify-items: center;
+    grid-template-columns: auto;
+    width: auto;
+    grid-template-areas: "a a a";
 }
 
 h2 {
@@ -52,6 +55,10 @@ td,th {
 }
 
 @media (max-width: 768px) {
+
+    .cards-grid {
+        grid-template-areas: "a";
+    }
 
     .card {
         width: 60vw;

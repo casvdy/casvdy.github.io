@@ -12,6 +12,7 @@
     margin-bottom: 3rem;
 }
 .heading {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
     text-align: center;
     color: #eff2f7;
     text-decoration: underline;
@@ -19,6 +20,7 @@
 }
 
 .subheading {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
     text-align: center;
     color: #fff;
     text-decoration: underline;
@@ -65,8 +67,10 @@
     margin-bottom: 3rem;
 }
 
-.members2 .cards-grid {
+.members2.cards-grid {
     grid-template-areas: 'a a a a a';
+    grid-template-columns: auto;
+    width: 76vw;
     justify-items: center;
     align-items: center;
     left: -6.5%;
@@ -77,8 +81,23 @@
 }
 
 @media (max-width: 768px) {
-    .members .cards-grid {
-        grid-template-areas: "a a" !important;
+
+    .subheading {
+        padding: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .desc {
+        font-size: 1.1rem;
+    }
+    .members.cards-grid {
+        grid-template-areas: "a" !important;
         left: -0.5rem ipo !important;
+        width: auto;
+        grid-template-columns: auto;
+    }
+
+    .members2.cards-grid {
+        grid-template-areas: "a";
     }
 }
