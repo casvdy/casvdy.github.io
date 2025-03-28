@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li class="dropdown-parent" ><a>Academics <span class="arrow">▼</span></a>
                     <ul class="dropdown">
                         <li><a href="/programmes">Programmes</a></li>
-                        <li><a href="http://docs.uoc.ac.in/website/news/2025-01-21%2010:58:29_new1986.pdf">Academic Calendar</a></li>
+                        <li><a href="http://docs.uoc.ac.in/website/news/2025-01-21%2010:58:29_new1986.pdf" target="_blank">Academic Calendar</a></li>
                         <li><a href="/departments">Departments</a></li>
                         <li><a href="/iqac">IQAC</a></li>
                         <li><a href="/library">Library</a></li>
