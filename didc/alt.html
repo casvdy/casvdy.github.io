@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="DIDC | College of Applied Science Vadakkencherry - Affiliated to University of Calicut">
+    <title>DIDC - College of Applied Science Vadakkencherry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend+Deca:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/didc/style.css">
+    <script src="/assets/util.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #1d3640;
+            --accent-color: #5abee9;
+            --text-light: #eff2f7;
+            --text-dark: #333;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition-slow: 0.5s ease;
+            --transition-quick: 0.3s ease;
+        }
+
+        body {
+            overflow-x: hidden;
+            font-family: 'Lexend Deca', sans-serif;
+            background: url('/media/spacepattern.avif') fixed;
+            background-size: cover;
+        }
+
+        .main-content {
+            backdrop-filter: blur(5px) brightness(77%);
+            min-height: 100vh;
+        }
+
+        .didc-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+
+        /* Header animation */
+        .subheading {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            color: var(--text-light);
+            margin: 3rem 0 2rem;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            font-size: 2.5rem;
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .subheading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--accent-color);
+            animation: lineGrow 1.5s 0.5s forwards;
+        }
+
+        @keyframes lineGrow {
+            to { width: 100%; }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Description */
+        .desc {
+            font-family: "Lexend Deca", sans-serif;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            width: 80%;
+            max-width: 1000px;
+            background-color: rgba(240, 248, 255, 0.95);
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s 0.3s forwards;
+        }
+
+        /* Member Cards */
+        .members-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .members, .members2 {
+            display: grid;
+            width: 100%;
+            justify-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .members {
+            grid-template-columns: repeat(2, 1fr);
+            animation: fadeInUp 1s 0.6s forwards;
+        }
+
+        .members2 {
+            grid-template-columns: repeat(5, 1fr);
+            animation: fadeInUp 1s 0.9s forwards;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            max-width: 280px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform var(--transition-quick), box-shadow var(--transition-quick);
+            transform: translateY(0);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(to bottom, rgba(90, 190, 233, 0.2), transparent);
+            z-index: 1;
+            transition: height var(--transition-slow);
+        }
+
+        .card:hover::before {
+            height: 100%;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            position: relative;
+            padding: 1.5rem;
+            text-align: center;
+            background: white;
+            z-index: 2;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Special styling for faculty and founders */
+        .faculty .card,
+        .founders .card {
+            transform: translateY(0);
+        }
+
+        .faculty .card:hover,
+        .founders .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .faculty .card-content::after,
+        .founders .card-content::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            transition: width var(--transition-quick);
+        }
+
+        .faculty .card:hover .card-content::after,
+        .founders .card:hover .card-content::after {
+            width: 80px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .members2 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .subheading {
+                font-size: 2rem;
+                width: 95%;
+            }
+            
+            .desc {
+                width: 90%;
+                font-size: 1.2rem;
+                padding: 1.5rem;
+            }
+            
+            .members {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .members2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .subheading {
+                font-size: 1.7rem;
+                padding: 1rem;
+            }
+            
+            .desc {
+                font-size: 1.1rem;
+                padding: 1.5rem;
+            }
+            
+            .members, .members2 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .card-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .subheading {
+                font-size: 1.4rem;
+            }
+            
+            .desc {
+                width: 95%;
+                font-size: 1rem;
+                padding: 1.2rem;
+            }
+            
+            .members, .members2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                max-width: 90%;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease;
+        }
+
+        .loading-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading-logo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-color);
+            animation: loadingLine 2s infinite;
+        }
+
+        @keyframes loadingLine {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent-color);
+            z-index: 9998;
+            width: 0%;
+        }
+
+        /* Parallax effect */
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('/media/spacepattern.avif') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading animation -->
+    <div class="loading-overlay">
+        <div class="loading-logo">DIDC</div>
+    </div>
+
+    <!-- Scroll progress indicator -->
+    <div class="scroll-indicator"></div>
+
+    <!-- Parallax background -->
+    <div class="parallax-bg" style="background: url('/media/cs-dept-thumb.avif');"></div>
+
+    <main class="main-content">
+        <div class="didc-section">
+            <h2 class="subheading">DIGITAL INFRASTRUCTURE & DEVELOPMENT COMMITTEE (DIDC)</h2>
+            <div class="desc">
+                <p>Digital Infrastructure and Development Committee is one of the most active and talented team of students at College of Applied Science, Vadakkencherry, overseeing the website, student login and other digital technologies that both the students and the staff of the college benefit from. DIDC was founded on 18 February 2025 by Aswin S Nair and Basil Shybu with the supervision from college faculty to rebuild the college website from scratch and to bring advanced college facilities.</p>
+            </div>
+            
+            <h2 class="subheading">MEMBERS</h2>
+            
+            <div class="members-container">
+                <!-- Faculty -->
+                <div class="members faculty">
+                    <article class="card">
+                        <img src="/media/staff/safna.jpg" class="card-image" alt="Safna K">
+                        <div class="card-content">
+                            <h3 class="card-title">Safna K</h3>
+                            <p class="card-text">Faculty In-Charge</p>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Founders -->
+                <div class="members founders">
+                    <article class="card">
+                        <img src="/media/didc/basil.jpeg" class="card-image" alt="Basil Shybu">
+                        <div class="card-content">
+                            <h3 class="card-title">Basil Shybu</h3>
+                            <p class="card-text">Chief Student Liaison<br>Founder</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="/media/didc/aswin.jpeg" class="card-image" alt="Aswin S Nair">
+                        <div class="card-content">
+                            <h3 class="card-title">Aswin S Nair</h3>
+                            <p class="card-text">Chief Technical Head<br>Founder</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Content Creators -->
+                <div class="members2">
+                    <article class="card">
+                        <img src="/media/didc/shifa.jpeg" class="card-image" alt="Shifa Yakoob">
+                        <div class="card-content">
+                            <h3 class="card-title">Shifa Yakoob</h3>
+                            <p class="card-text">Content Creator</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="/media/didc/anaswara.jpeg" class="card-image" alt="R Anaswara">
+                        <div class="card-content">
+                            <h3 class="card-title">R Anaswara</h3>
+                            <p class="card-text">Content Creator</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="/media/didc/sreya.jpeg" class="card-image" alt="Sreya S">
+                        <div class="card-content">
+                            <h3 class="card-title">Sreya S</h3>
+                            <p class="card-text">Content Creator</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <img src="/media/didc/rajeswari.jpeg" class="card-image" alt="Rajeswari K M">
+                        <div class="card-content">
+                            <h3 class="card-title">Rajeswari K M</h3>
+                            <p class="card-text">Content Creator</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <img src="/media/didc/slipa.jpeg" class="card-image" alt="Silpa C">
+                        <div class="card-content">
+                            <h3 class="card-title">Silpa C</h3>
+                            <p class="card-text">Content Creator</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Loading animation
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.loading-overlay').style.opacity = 0;
+                setTimeout(() => {
+                    document.querySelector('.loading-overlay').style.display = 'none';
+                }, 600);
+            }, 800);
+        });
+
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.offsetHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.querySelector('.scroll-indicator').style.width = `${scrollPercent}%`;
+        });
+
+        // Initialize GSAP animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Register ScrollTrigger plugin
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Parallax effect on background
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                document.querySelector('.parallax-bg').style.transform = `translateY(${scrollPosition * 0.3}px)`;
+            });
+
+            // Animate cards on scroll
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top bottom-=100",
+                        toggleActions: "play none none none"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: index * 0.1
+                });
+            });
+
+            // Add subtle hover animations for cards
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', (e) => {
+                    gsap.to(e.currentTarget, {
+                        y: -10,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+                
+                card.addEventListener('mouseleave', (e) => {
+                    gsap.to(e.currentTarget, {
+                        y: 0,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

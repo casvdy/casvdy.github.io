@@ -1,9 +1,12 @@
 :root {
-    background: url('/media/spacepattern.avif');
+    background: url('https://i.pinimg.com/736x/2a/46/c9/2a46c90caab5e4296e7274f814006da3.jpg');
+    background-position: center;
+    background-origin: content-box;
+    background-attachment: fixed;
 }
 
 .main-content {
-    backdrop-filter: blur(2px) brightness(77%);
+    backdrop-filter: blur(2px) brightness(63.33%);
 }
 
 .didc-section {
@@ -15,7 +18,7 @@
     font-family: 'Playfair Display','Times New Roman', Times, serif;
     text-align: center;
     color: #eff2f7;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin: 3rem;
 }
 
@@ -23,20 +26,21 @@
     font-family: 'Playfair Display','Times New Roman', Times, serif;
     text-align: center;
     color: #fff;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-bottom: 2rem;
     margin-top: 2rem;
-    background: #1d3640;
+    /* background: #1d3640; */
+    background: linear-gradient(to top, #d3e0e6, #1d3640 20%);
     font-size: 2.3rem;
 }   
 
 .desc {
-    font-family: "Lexend";
+    font-family: "Lexend Deca", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.3rem;
     align-self: center;
     position: relative;
     padding: 1.5rem;
-    width: 70vw;
+    width: 90%;
     background-color: aliceblue;
     text-align: center;
     border-radius: 18px;

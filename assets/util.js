@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     try {
         const template = document.createElement('template');
         let home = '';
-        if (document.location.pathname==='/') {
+        if (document.location.pathname === '/') {
             home = '';
         }
         else {
@@ -173,48 +173,51 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let items = document.querySelectorAll('.gallery-item');
 
-        items.forEach((item) => {
-            item.addEventListener('click', (e) => {
-                // Create modal elements
-                const modal = document.createElement('div');
-                modal.className = 'gallery-modal active';
-                document.body.classList.add('modal-open');
+        if (items) {
+            items.forEach((item) => {
+                item.addEventListener('click', (e) => {
+                    // Create modal elements
+                    const modal = document.createElement('div');
+                    modal.className = 'gallery-modal active';
+                    document.body.classList.add('modal-open');
 
-                const content = document.createElement('div');
-                content.className = 'gallery-modal-content';
+                    const content = document.createElement('div');
+                    content.className = 'gallery-modal-content';
 
-                const img = new Image();
-                const src = document.createElement('p', { class: "author" });
-                src.textContent = item.querySelector('img').getAttribute('data-src');
-                img.className = 'gallery-modal-img';
-                img.src = item.querySelector('img').src;
-                img.alt = item.querySelector('img').alt;
+                    const img = new Image();
+                    const src = document.createElement('p', { class: "author" });
+                    src.textContent = item.querySelector('img').getAttribute('data-src');
+                    img.className = 'gallery-modal-img';
+                    img.src = item.querySelector('img').src.replace('thumbs/', '');
+                    img.alt = item.querySelector('img').alt;
 
 
-                // Build modal structure
-                content.appendChild(src);
-                content.appendChild(img);
-                modal.appendChild(content);
-                document.body.appendChild(modal);
+                    // Build modal structure
+                    content.appendChild(src);
+                    content.appendChild(img);
+                    modal.appendChild(content);
+                    document.body.appendChild(modal);
 
-                // Close modal on click
-                modal.addEventListener('click', (e) => {
-                    if (modal === e.target) {
-                        document.body.classList.remove('modal-open');
-                        modal.remove();
-                    }
-                });
+                    // Close modal on click
+                    modal.addEventListener('click', (e) => {
+                        if (modal === e.target) {
+                            document.body.classList.remove('modal-open');
+                            modal.remove();
+                        }
+                    });
 
-                // Close on ESC key
-                document.addEventListener('keydown', function escClose(e) {
-                    if (e.key === 'Escape') {
-                        document.body.classList.remove('modal-open');
-                        modal.remove();
-                        document.removeEventListener('keydown', escClose);
-                    }
+                    // Close on ESC key
+                    document.addEventListener('keydown', function escClose(e) {
+                        if (e.key === 'Escape') {
+                            document.body.classList.remove('modal-open');
+                            modal.remove();
+                            document.removeEventListener('keydown', escClose);
+                        }
+                    });
                 });
             });
-        });
+        }
+
     } catch (error) {
         console.log('[GALLERY-ITEM] ', error)
     }
