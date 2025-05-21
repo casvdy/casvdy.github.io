@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Use try-catch blocks for diff utils so if one fails, the rest of it won't.
-
+    // Update hero-image src if not mobile
+    try {
+        const heroImage = document.querySelector('.hero-image');
+        if (heroImage && window.innerWidth > 768) { // Assuming >768px is not mobile
+            heroImage.src = '/media/landingimage.avif';
+        }
+    } catch (error) {
+        console.error("[HERO IMAGE UPDATE] ", error);
+    }
     // ADD HEADER
     try {
         const template = document.createElement('template');

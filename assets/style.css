@@ -40,7 +40,7 @@ body {
     z-index: 1001;
     height: 48px;
     left: 180dvh;
-    top: 1.5vh;
+    top: 1.4vh;
     border-radius: 15rem;
     transition: all 300ms ease;
 }
@@ -84,7 +84,7 @@ body {
     position: relative;
     background: #f4f8ff;
     ;
-    border-radius: 0.5rem;
+    border-radius: 46px;
 }
 
 .nav-list a {
