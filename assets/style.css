@@ -380,8 +380,9 @@ a[href="/didc"] {
     }
 
     .student-login-btn {
-        height: 38px;
-        top: 1.1vh;
+        height: 32px;
+        top: 1.5vh;
+        padding-left: 0.5vh;
     }
 
     .menu-btn {
