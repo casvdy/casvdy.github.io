@@ -35,25 +35,18 @@ body {
 }
 
 .student-login-btn {
+    align-self: self-end;
     position: absolute;
     z-index: 1001;
-    left: 95vw;
-    width: auto;
-    height: fit-content;
-    top: 1.3vh;
-    padding: 0.5rem;
-    text-transform: uppercase;
-    font-family: 'Playfair Display';
-    font-weight: bolder;
-    color: whitesmoke;
+    height: 48px;
+    left: 180dvh;
+    top: 1.5vh;
     border-radius: 15rem;
     transition: all 300ms ease;
 }
 
 .student-login-btn:hover {
-    color: black;
     background: linear-gradient(#1a365d 3% 0%, #5abee9);
-    transform: translateY(-3px);
 }
 
 .hero-content .logo {
@@ -387,15 +380,8 @@ a[href="/didc"] {
     }
 
     .student-login-btn {
-        height: fit-content;
-        width: fit-content;
-        right: 14rem;
-        left: 86vw;
-        font-size: xx-small;
-        top: auto;
-        align-self: center;
-        border: none;
-        padding: 0.2rem;
+        height: 38px;
+        top: 1.1vh;
     }
 
     .menu-btn {
