@@ -84,7 +84,7 @@ body {
     position: relative;
     background: #f4f8ff;
     ;
-    border-radius: 46px;
+    border-radius: 0.5rem;
 }
 
 .nav-list a {
