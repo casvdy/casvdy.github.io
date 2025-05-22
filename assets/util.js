@@ -1,14 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Use try-catch blocks for diff utils so if one fails, the rest of it won't.
-    // Update hero-image src if not mobile
-    try {
-        const heroImage = document.querySelector('.hero-image');
-        if (heroImage && window.innerWidth > 768) { // Assuming >768px is not mobile
-            heroImage.src = '/media/landingimage.avif';
-        }
-    } catch (error) {
-        console.error("[HERO IMAGE UPDATE] ", error);
-    }
     // ADD HEADER
     try {
         const template = document.createElement('template');
@@ -26,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <form class="search">
             <input type="search" placeholder="Search courses, people, etc">
         </form>
-        <svg class="student-login-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" class="size-6">
+        <svg class="student-login-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff">
   <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
 </svg>
 
@@ -150,24 +141,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         dropdownParents.forEach(parent => {
-            parent.addEventListener('click', function (e) {
+            const parentLink = parent.querySelector('a');
+            parentLink.addEventListener('click', function (e) {
                 if (window.innerWidth <= 768) {
-                    // Check if the clicked element is a link inside the dropdown
-                    if (!e.target.closest('.dropdown a')) {
-                        console.log('clickity clack');
-                        e.preventDefault(); // Only prevent default if not clicking a dropdown link
+                    e.preventDefault(); // Prevent navigation for mobile dropdown toggles
+                    if (parent.classList.contains('active')) {
+                        parent.classList.remove('active');
+                    } else {
                         closeAllDropdowns();
-                        if (this.classList.contains('active')) {
-                            this.classList.remove('active');
-                        }
-                        else {
-                            this.classList.add('active');
-                        }
+                        parent.classList.add('active');
                     }
                 }
             });
+
+            // Handle clicks on dropdown items
+            const dropdownLinks = parent.querySelectorAll('.dropdown a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent the parent click handler from firing
+                });
+            });
         });
 
+        // Close dropdowns when clicking outside
         document.addEventListener('click', function (e) {
             if (!e.target.closest('.dropdown-parent')) {
                 closeAllDropdowns();
@@ -239,27 +235,17 @@ document.addEventListener('DOMContentLoaded', function () {
 function toggleMenu() {
     const hamburger = document.querySelector('.menu-btn');
     const menu = document.querySelector('.main-nav');
-    const navLinks = document.querySelectorAll('.nav-list a');
+    const body = document.body;
 
     if (menu.getAttribute('data-shown') === 'hidden') {
-        // Opening animation
         menu.setAttribute('data-shown', 'shown');
         hamburger.classList.add('active');
         hamburger.setAttribute("src", "/media/close.svg");
-
-        // Cascade animation with faster delays
-        navLinks.forEach((link, index) => {
-            link.style.transitionDelay = `${(index - 1) * 0.03}s`;
-        });
+        body.style.overflow = 'hidden';
     } else {
-        // Closing animation
         menu.setAttribute('data-shown', 'hidden');
         hamburger.classList.remove('active');
         hamburger.setAttribute("src", "/media/menu.svg");
-
-        // Reset delays for next opening
-        navLinks.forEach(link => {
-            link.style.transitionDelay = '0s';
-        });
+        body.style.overflow = '';
     }
 }
