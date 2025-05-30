@@ -62,11 +62,14 @@ body {
     left: 180dvh;
     top: 1.4vh;
     border-radius: 15rem;
+    right: 2vw;
+    left: auto;
+    top: 1.4vh;
     transition: all var(--transition-standard);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: none;
     color: var(--white);
-    padding: 0.5rem 1.5rem;
+    /* padding: 0.5rem 1.5rem; */
     cursor: pointer;
     transform-origin: center;
 }
@@ -463,7 +466,7 @@ a[href="/didc"] {
 
     .student-login-btn {
         position: static;
-        height: 12px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
