@@ -155,7 +155,6 @@ body {
 }
 
 .nav-list a:hover {
-    color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -196,7 +195,7 @@ body {
 }
 
 .dropdown a:hover {
-    background: var(--background-light);
+    /* background: var(--background-light); */
     color: var(--primary-color);
     padding-left: 1.6rem;
 }
