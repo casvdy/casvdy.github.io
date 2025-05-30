@@ -66,5 +66,50 @@
         </div>
     </main>
 </body>
+<script>
+    try {
+        let items = document.querySelectorAll('.gallery-item');
+        if (items) {
+            items.forEach((item) => {
+                item.addEventListener('click', (e) => {
+                    const modal = document.createElement('div');
+                    modal.className = 'gallery-modal active';
+                    document.body.classList.add('modal-open');
 
+                    const content = document.createElement('div');
+                    content.className = 'gallery-modal-content';
+
+                    const img = new Image();
+                    const src = document.createElement('p', { class: "author" });
+                    src.textContent = item.querySelector('img').getAttribute('data-src');
+                    img.className = 'gallery-modal-img';
+                    img.src = item.querySelector('img').src.replace('thumbs/', '');
+                    img.alt = item.querySelector('img').alt;
+                    // Build modal structure
+                    content.appendChild(src);
+                    content.appendChild(img);
+                    modal.appendChild(content);
+                    document.body.appendChild(modal);
+                    // Close modal on click
+                    modal.addEventListener('click', (e) => {
+                        if (modal === e.target) {
+                            document.body.classList.remove('modal-open');
+                            modal.remove();
+                        }
+                    });
+                    // Close on ESC key
+                    document.addEventListener('keydown', function escClose(e) {
+                        if (e.key === 'Escape') {
+                            document.body.classList.remove('modal-open');
+                            modal.remove();
+                            document.removeEventListener('keydown', escClose);
+                        }
+                    });
+                });
+            });
+        }
+    } catch (error) {
+        console.log('[GALLERY-ITEM] ', error)
+    }
+</script>
 </html>
